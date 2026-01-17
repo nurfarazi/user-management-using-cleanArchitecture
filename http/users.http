@@ -12,7 +12,9 @@ Content-Type: {{contentType}}
   "password": "SecurePassword@123",
   "confirmPassword": "SecurePassword@123",
   "phoneNumber": "+1234567890",
-  "dateOfBirth": "1990-01-15"
+  "dateOfBirth": "1990-01-15",
+  "termsAcceptedVersion": "1.0",
+  "privacyPolicyAcceptedVersion": "1.0"
 }
 
 ### Register a new user - Another example
@@ -22,11 +24,13 @@ Content-Type: {{contentType}}
 {
   "firstName": "Jane",
   "lastName": "Smith",
-  "email": "jane.smith@example.com",
+  "email": "jane.smith2@example.com",
   "password": "AnotherSecure@456",
   "confirmPassword": "AnotherSecure@456",
-  "phoneNumber": "+9876543210",
-  "dateOfBirth": "1992-05-20"
+  "phoneNumber": "+98765423210",
+  "dateOfBirth": "1992-05-20",
+  "termsAcceptedVersion": "1.0",
+  "privacyPolicyAcceptedVersion": "1.0"
 }
 
 ### Register user - Validation error (invalid email)
@@ -40,7 +44,9 @@ Content-Type: {{contentType}}
   "password": "SecurePassword@123",
   "confirmPassword": "SecurePassword@123",
   "phoneNumber": "+1234567810",
-  "dateOfBirth": "1990-01-15"
+  "dateOfBirth": "1990-01-15",
+  "termsAcceptedVersion": "1.0",
+  "privacyPolicyAcceptedVersion": "1.0"
 }
 
 ### Register user - Password mismatch
@@ -54,7 +60,9 @@ Content-Type: {{contentType}}
   "password": "SecurePassword@123",
   "confirmPassword": "DifferentPassword@456",
   "phoneNumber": "+1234567890",
-  "dateOfBirth": "1990-01-15"
+  "dateOfBirth": "1990-01-15",
+  "termsAcceptedVersion": "1.0",
+  "privacyPolicyAcceptedVersion": "1.0"
 }
 
 ### Register user - Duplicate email (run after first successful registration)
@@ -68,7 +76,9 @@ Content-Type: {{contentType}}
   "password": "SecurePassword@123",
   "confirmPassword": "SecurePassword@123",
   "phoneNumber": "+1111111111",
-  "dateOfBirth": "1995-03-10"
+  "dateOfBirth": "1995-03-10",
+  "termsAcceptedVersion": "1.0",
+  "privacyPolicyAcceptedVersion": "1.0"
 }
 
 ### Register user - Missing required fields
