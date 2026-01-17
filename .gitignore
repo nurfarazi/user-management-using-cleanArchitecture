@@ -1,0 +1,82 @@
+## .NET / Visual Studio
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.rsuser
+*.cache
+*.pdb
+*.opendb
+*.sdf
+*.sln.docstates
+*.nupkg
+*.snupkg
+*.nuspec
+*.ncrunch*
+*.ide
+*.dbmdl
+*.jfm
+*.pfx
+project.lock.json
+project.fragment.lock.json
+artifacts/
+TestResults/
+*.log
+*.vsix
+*.vsp
+*.vspx
+*.psess
+*.pidb
+*.svclog
+*.appx
+*.appxbundle
+*.appxupload
+*.bak
+*.tmp
+*.temp
+*.orig
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.tlog
+*.tlb
+*.log
+*.wrn
+*.err
+*.vsconfig
+.vs/
+
+## Build outputs
+[Dd]ebug/
+[Rr]elease/
+[xX]64/
+[xX]86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+*.launchSettings.json
+
+## NuGet
+packages/
+*.nuget.props
+*.nuget.targets
+
+## Rider
+.idea/
+
+## VS Code
+.vscode/
+
+## OS files
+.DS_Store
+Thumbs.db

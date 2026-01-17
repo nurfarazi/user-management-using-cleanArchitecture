@@ -1,0 +1,10 @@
+### Environment variables for HTTP requests
+@baseUrl = http://localhost:5107
+@contentType = application/json
+@port = 5107
+
+### Common test data
+@testEmail = test.user@example.com
+@testPassword = TestPassword@123
+@testFirstName = John
+@testLastName = Doe

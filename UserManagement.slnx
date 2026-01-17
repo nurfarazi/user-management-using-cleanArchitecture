@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UserManagement.API/UserManagement.API.csproj" />
+    <Project Path="src/UserManagement.Repository/UserManagement.Repository.csproj" />
+    <Project Path="src/UserManagement.Services/UserManagement.Services.csproj" />
+    <Project Path="src/UserManagement.Shared/UserManagement.Shared.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UserManagement.API.Tests/UserManagement.API.Tests.csproj" />
+    <Project Path="tests/UserManagement.Repository.Tests/UserManagement.Repository.Tests.csproj" />
+    <Project Path="tests/UserManagement.Services.Tests/UserManagement.Services.Tests.csproj" />
+  </Folder>
+</Solution>

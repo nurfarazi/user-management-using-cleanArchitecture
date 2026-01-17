@@ -1,0 +1,105 @@
+@baseUrl = http://localhost:5107
+@contentType = application/json
+
+### Register a new user - Success case
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "SecurePassword@123",
+  "confirmPassword": "SecurePassword@123",
+  "phoneNumber": "+1234567890",
+  "dateOfBirth": "1990-01-15"
+}
+
+### Register a new user - Another example
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "password": "AnotherSecure@456",
+  "confirmPassword": "AnotherSecure@456",
+  "phoneNumber": "+9876543210",
+  "dateOfBirth": "1992-05-20"
+}
+
+### Register user - Validation error (invalid email)
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Invalid",
+  "lastName": "User",
+  "email": "invalid-email",
+  "password": "SecurePassword@123",
+  "confirmPassword": "SecurePassword@123",
+  "phoneNumber": "+1234567810",
+  "dateOfBirth": "1990-01-15"
+}
+
+### Register user - Password mismatch
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Test",
+  "lastName": "User",
+  "email": "test@example.com",
+  "password": "SecurePassword@123",
+  "confirmPassword": "DifferentPassword@456",
+  "phoneNumber": "+1234567890",
+  "dateOfBirth": "1990-01-15"
+}
+
+### Register user - Duplicate email (run after first successful registration)
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Duplicate",
+  "lastName": "Email",
+  "email": "john.doe@example.com",
+  "password": "SecurePassword@123",
+  "confirmPassword": "SecurePassword@123",
+  "phoneNumber": "+1111111111",
+  "dateOfBirth": "1995-03-10"
+}
+
+### Register user - Missing required fields
+POST {{baseUrl}}/api/v1/users/register
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Incomplete",
+  "email": "incomplete@example.com"
+}
+
+### Update an existing user - Success case
+### Note: Replace {{userId}} with a real ID from a previous registration
+@userId = 507f1f77bcf86cd799439011
+PUT {{baseUrl}}/api/v1/users/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "firstName": "John Updated",
+  "lastName": "Doe Updated",
+  "displayName": "Johnny",
+  "phoneNumber": "+8801711223344",
+  "dateOfBirth": "1990-01-15"
+}
+
+### Update user - Validation error (underage)
+PUT {{baseUrl}}/api/v1/users/{{userId}}
+Content-Type: {{contentType}}
+
+{
+  "firstName": "Young",
+  "lastName": "User",
+  "dateOfBirth": "2020-01-01"
+}
